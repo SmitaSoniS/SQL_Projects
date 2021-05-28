@@ -88,7 +88,6 @@ ORDER BY TotalDeathCount DESC
 
 --TOTAL POPULATION VS VACCINATION
 --Rolling Count Calculation
-
 WITH PopulationVSVaccination(
   continent, 
   location, 
@@ -112,10 +111,8 @@ WHERE Death.continent IS NOT NULL
 )
 SELECT *, (RollingPeopleVaccinated/population)*100 AS PercRollingPeopleVaccinated
 FROM PopulationVSVaccination
-  
 
 --TEMP TABLE
-
 DROP TABLE IF EXISTS #PercentPopulationVaccinated
 CREATE TABLE #PercentPopulationVaccinated
   (
