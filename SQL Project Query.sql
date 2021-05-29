@@ -139,7 +139,6 @@ WHERE Death.continent IS NOT NULL
 SELECT *, (RollingPeopleVaccinated/population)*100
 FROM #PercentPopulationVaccinated
 
-
 --Creating View to store data for later
 CREATE VIEW PercentagePeopleVaccinated AS
 SELECT 
